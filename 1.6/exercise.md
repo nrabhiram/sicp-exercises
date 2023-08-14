@@ -24,7 +24,7 @@ Delighted, Alyssa uses `new-if` to rewrite the *square-root* program:
           guess
           (sqrt-iter (improve guess x) x)))
 ```
-What happens when Alyssa aempts to use this to compute square roots? Explain.
+What happens when Alyssa attempts to use this to compute square roots? Explain.
 
 # Solution
 

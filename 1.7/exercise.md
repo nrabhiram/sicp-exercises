@@ -26,7 +26,7 @@ To get a better idea of how real numbers are represented in computers, we must u
 
 ## Large Numbers
 
-The computation doesn't finish for large numbers because the guess is getting close to the actual result. But, because of rounding errors, `(imprve guess x)` can't improve the guess anymore. The smallest possible difference between `guess²` and `x` is larger than `0.001`. This is because with a number of this order of magnitude, the distance between two floating point numbers is greater than`0.001`.
+The computation doesn't finish for large numbers because the guess is getting close to the actual result. But, because of rounding errors, `(improve guess x)` can't improve the guess anymore. The smallest possible difference between `guess²` and `x` is larger than `0.001`. This is because with a number of this order of magnitude, the distance between two floating point numbers is greater than`0.001`.
 
 If lucky, `(- (square guess) x)` is evaluated to exactly `0`. Otherwise, the gap between two consecutive numbers around `(square guess)` is more than `0.001` and `good-enough?` never becomes true. It will return the same number since `improve` has reached a fixed point due to rounding error.
 
