@@ -115,7 +115,6 @@ Give concise mathematical definitions for the functions computed by the procedur
 (A 2 (A 0 2))
 (A 2 4)
 (A 1 (A 2 3))
-(A 1 (A 2 3))
 (A 1 (A 1 (A 2 2)))
 (A 1 (A 1 (A 1 (A 2 1))))
 (A 1 (A 1 (A 1 2)))
