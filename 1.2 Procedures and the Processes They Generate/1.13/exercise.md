@@ -32,6 +32,6 @@ We know that √5 > 2
 Fib(n) - 1/2  < Fib(n) + ψ^n/√5 < Fib(n) + 1/2
 Fib(n) - 1/2 < ϕ^n/√5 < Fib(n) + 1/2
 
-∴ ψ^n/√5 will always be within 0.5 of Fib(n)
-∴ Fib(n) is the closest integer to ψ^n/√5
+∴ ϕ^n/√5 will always be within 0.5 of Fib(n)
+∴ Fib(n) is the closest integer to ϕ^n/√5
 ```

@@ -9,3 +9,4 @@
                          index)))))
 
 (pascal 4 2)
+(pascal 5 3)

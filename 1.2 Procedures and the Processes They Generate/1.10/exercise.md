@@ -18,7 +18,7 @@ What are the values of the following expressions?
 (A 3 3)
 ```
 
-Consider the following procedures, where A is the procedure defined above:
+Consider the following procedures, where `A` is the procedure defined above:
 
 ```scheme
 (define (f n) (A 0 n))
@@ -27,7 +27,7 @@ Consider the following procedures, where A is the procedure defined above:
 (define (k n) (* 5 n n))
 ```
 
-Give concise mathematical definitions for the functions computed by the procedures f, g, and h for positive integer values of n. For example, (k n) computes 5n^2.
+Give concise mathematical definitions for the functions computed by the procedures `f`, `g`, and `h` for positive integer values of `n`. For example, `(k n)` computes `5n^2`.
 
 # Solution
 
@@ -105,7 +105,6 @@ Give concise mathematical definitions for the functions computed by the procedur
 
 ```
 (A 3 3)
-(A 2 (A 3 2))
 (A 2 (A 3 2))
 (A 2 (A 2 (A 3 1)))
 (A 2 (A 2 2))
