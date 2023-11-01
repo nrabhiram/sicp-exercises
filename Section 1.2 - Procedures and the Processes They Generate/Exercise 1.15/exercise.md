@@ -3,7 +3,7 @@
 The sine of an angle (specified in radians) can be computed by:
 
 - making use of the approximation `sinx ≈ x` if `x` is sufficiently small, and
-- the trigonometric identity `sin x = 3 sin(x/3) − 4 sin^3(x/3)` to reduce the size of the argument of sin.
+- the trigonometric identity `sin x = 3 sin(x/3) − 4 sin³(x/3)` to reduce the size of the argument of sin.
 
 **Note**: For purposes of this exercise an angle is considered *sufficiently small* if its magnitude is not greater than `0.1` radians.
 
@@ -33,14 +33,14 @@ b. What is the order of growth in space and number of steps (as a function of `a
 (p (p (p (p (p (0.05))))))
 ```
 
-a. The procedure `p` is applied 5 times when `(sine 12.15)` is evaluated.
+a. The procedure `p` is applied `5` times when `(sine 12.15)` is evaluated.
 
-Each time we apply `p`, we divide the angle `a` by 3. So, we want to know how many times we can divide `a` by 3 before it becomes smaller than or equal to 0.1 radians. Logarithms help us understand how many times we need to multiply a number by itself to get another number. To make sure we have a whole number of divisions, we use the ceiling function. This function rounds up to the next nearest whole number.
+Each time we apply `p`, we divide the angle `a` by `3`. So, we want to know how many times we can divide `a` by `3` before it becomes smaller than or equal to `0.1` radians. Logarithms help us understand how many times we need to multiply a number by itself to get another number. To make sure we have a whole number of divisions, we use the ceiling function. This function rounds up to the next nearest whole number.
 
 ```
-a/3^n < 0.1
-a/0.1 < 3^n
-log(a/0.1) < log(3^n)
+a/3ⁿ < 0.1
+a/0.1 < 3ⁿ
+log(a/0.1) < log(3ⁿ)
 log(a/0.1)/log(3) < n
 n = ceiling(log(a/0.1)/log(3))
 ```

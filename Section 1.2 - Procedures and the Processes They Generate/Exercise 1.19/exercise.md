@@ -35,8 +35,8 @@ Upon applying transformation T twice, we end up with (a₂, b₂).
 Let's say that performing T′ once is equivalent to performing T twice.
 We have to find the values of p′ and q′ in terms of p and q.
 
-a₁ = b₀q + a₀q + a₀p --> Eqn 2
-b₁ = b₀p + a₀q --> Eqn 1
+a₁ = b₀q + a₀q + a₀p --> Eqn 1
+b₁ = b₀p + a₀q --> Eqn 2
 b₂ = b₁p + a₁q --> Eqn 3
 
 Substituting (1) and (2) in (3),
@@ -46,5 +46,5 @@ b₂ = b₀p² + a₀qp + b₀q² + a₀q² + a₀pq
 b₂ = b₀(p²+q²) + a₀(q² + 2qp )
 
 ∴ p′ = p²+q²
-∴ q′ = q² + 2qp
+∴ q′ = q² + 2pq
 ```

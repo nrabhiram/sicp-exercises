@@ -24,25 +24,25 @@ Louis' version of `expmod` uses `*` instead of `square`. Since we follow **appli
 If we consider the case in which we use `square`, when the size of the exponential doubles, the number of steps increases by 1.
 
 ```
-(square (expmod base n m)) --> a steps
+(square (expmod base n m)) → a steps
 
 (square (expmod base 2n m))
-(square (square (expmod base n m))) --> (a + 1) steps
+(square (square (expmod base n m))) → (a + 1) steps
 ```
 
-This implies an orgder of growth of `Θ(logn)`.
+This implies an order of growth of `Θ(logn)`.
 
 Whereas if we consider the case in which we use `*`, the number of steps is doubled whenever the size of the exponentional is doubled.
 
 ```
 (* (expmod base n m)
-   (expmod base n m)) --> a steps
+   (expmod base n m)) → a steps
 
 (* (expmod base 2n m)
    (expmod base 2n m))
 
 (* (* (expmod base n m) (expmod base n m))
-   (* (expmod base n m) (expmod base n m))) --> 2a steps
+   (* (expmod base n m) (expmod base n m))) → 2a steps
 ```
 
 ∴ The new order of growth is `Θ(n)`.

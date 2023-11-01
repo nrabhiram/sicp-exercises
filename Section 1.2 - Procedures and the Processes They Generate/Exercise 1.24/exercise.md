@@ -28,7 +28,7 @@ The average time taken for the first 3 prime integers around 1000, 10 000, 100 0
 - 26.67µs
 - 76.33µs
 
-We notice that for everytime n increases by a factor of 10, the time taken to compute increases by a factor of nearly 2.85 (≈ √10).
+We notice that for everytime `n` increases by a factor of 10, the time taken to compute increases by a factor of nearly 2.85 (≈ √10).
 
 ## Fermat Test
 
@@ -39,4 +39,4 @@ The average time taken for the first 3 prime integers around 1000, 10 000, 100 0
 - 5.67µs
 - 6.33µs
 
-We notice that for everytime n increases by a factor of 10, the increment in time taken to compute is around 0.67µs.
+We notice that for everytime `n` increases by a factor of 10, the increment in time taken to compute is around 0.67µs.
