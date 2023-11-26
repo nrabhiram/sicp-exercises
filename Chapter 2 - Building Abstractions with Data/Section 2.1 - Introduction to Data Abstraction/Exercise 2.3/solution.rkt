@@ -38,7 +38,6 @@
   (* 2
      (+ (width rect)
         (height rect))))
-
 (define (area-rect rect)
   (* (width rect)
      (height rect)))
@@ -48,8 +47,8 @@
       (cons p1 (cons p2 p3))
       (error "Points should make an rectangle.")))
 (define (height-2 rect)
-  (distance (cdr (cdr rect))
-            (car (cdr rect))))
+  (distance (car rect)
+            (cdr (cdr rect))))
 (define (width-2 rect)
   (distance (car rect)
             (car (cdr rect))))
@@ -58,7 +57,6 @@
   (* 2
      (+ (width-2 rect)
         (height-2 rect))))
-
 (define (area-rect-2 rect)
   (* (width-2 rect)
      (height-2 rect)))

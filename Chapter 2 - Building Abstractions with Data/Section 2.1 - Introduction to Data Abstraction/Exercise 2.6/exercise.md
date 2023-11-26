@@ -46,7 +46,7 @@ And `two` is defined as:
 (define two (lambda (f) (lambda (x) (f (f x)))))
 ```
 
-From this pattern, we can deduce that the addition of two numbers can be defined by a procedure as shown:
+We can deduce from this pattern that the addition of two numbers can be defined by a procedure as shown:
 
 ```scheme
 (define (add a b)
