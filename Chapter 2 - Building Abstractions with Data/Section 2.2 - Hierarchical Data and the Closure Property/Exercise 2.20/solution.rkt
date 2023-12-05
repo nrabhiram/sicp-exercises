@@ -9,9 +9,14 @@
   (define (iter l parity-list parity)
     (cond ((null? l) parity-list)
           ((= (get-parity (car l)) parity)
-           (iter (cdr l) (append parity-list (list (car l))) parity))
+           (iter (cdr l)
+                 (append parity-list
+                         (list (car l)))
+                 parity))
           (else
-           (iter (cdr l) parity-list parity))))
+           (iter (cdr l)
+                 parity-list
+                 parity))))
   (let ((parity (get-parity x)))
     (iter y (list x) parity)))
 
@@ -20,7 +25,10 @@
     (if (even? x) 0 1))
   (define (recur l)
     (cond ((null? l) nil)
-          ((= (get-parity (car l)) (get-parity x)) (cons (car l) (recur (cdr l))))
+          ((= (get-parity (car l))
+              (get-parity x))
+           (cons (car l)
+                 (recur (cdr l))))
           (else (recur (cdr l)))))
   (cons x (recur y)))
 
