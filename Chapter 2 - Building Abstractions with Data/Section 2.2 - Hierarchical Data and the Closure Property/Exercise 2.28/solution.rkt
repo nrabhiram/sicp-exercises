@@ -1,0 +1,27 @@
+#lang sicp
+
+(define (fringe-r tree)
+  (cond ((null? tree) nil)
+         ((pair? tree)
+          (let ((el (car tree))
+                (subtree (cdr tree)))
+            (if (pair? el)
+                (append (fringe-r el) (fringe-r subtree))
+                (cons el (fringe-r subtree)))))))
+
+(define (fringe-i tree)
+  (define (iter tree result)
+    (cond ((null? tree) result)
+          ((pair? tree)
+           (let ((el (car tree))
+                 (subtree (cdr tree)))
+             (if (pair? el)
+                 (iter subtree (iter el result))
+                 (iter subtree (append result (list el))))))))
+  (iter tree nil))
+
+(define x (list (list 1 2) (list 3 4)))
+(fringe-r x)
+(fringe-r (list x x))
+(fringe-i x)
+(fringe-i (list x x))
