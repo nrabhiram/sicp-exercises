@@ -163,5 +163,5 @@ Give concise mathematical definitions for the functions computed by the procedur
 ```
 f(n) = 2n
 g(n) = 2^n
-h(n) = 2^h(n-1) --> by method of induction
+h(n) = 2^h(n-1) → by method of induction
 ```

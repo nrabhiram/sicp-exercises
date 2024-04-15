@@ -36,7 +36,7 @@
   ((iterative-improve close-enough? f) guess))
 
 (define (cbrt x)
-  (fixed-point (average-damp (lambda (y) (/ x (square y)))) 1.1))
+  (fixed-point (average-damp (lambda (y) (/ x (square y)))) 1.0))
 
 (sqrt 9)
 (cbrt 27)

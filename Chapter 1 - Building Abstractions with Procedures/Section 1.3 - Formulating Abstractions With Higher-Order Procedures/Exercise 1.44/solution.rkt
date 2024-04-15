@@ -19,4 +19,4 @@
       (/ (+ (f a) (f x) (f b)) 3))))
 
 (define (smooth-nth f n)
-  (repeated f n))
+  ((repeated smooth n) f))
