@@ -21,10 +21,10 @@
 (define (end-segment segt) (cdr segt))
 
 (define (midpoint-segment segt)
-  (let ((x-1 (car (car segt)))
-        (y-1 (cdr (car segt)))
-        (x-2 (car (cdr segt)))
-        (y-2 (cdr (cdr segt))))
+  (let ((x-1 (x-point (start-segment segt)))
+        (y-1 (y-point (start-segment segt)))
+        (x-2 (x-point (end-segment segt)))
+        (y-2 (y-point (end-segment segt))))
     (make-point (average x-1 x-2)
                 (average y-1 y-2))))
 
