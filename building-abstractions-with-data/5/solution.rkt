@@ -1,0 +1,20 @@
+#lang sicp
+
+(define (cons a b)
+  (* (expt 2 a) (expt 3 b)))
+(define (car z)
+  (define (iter z n)
+    (if (= (remainder z 2) 0)
+        (iter (/ z 2) (+ n 1))
+        n))
+  (iter z 0))
+(define (cdr z)
+  (define (iter z n)
+    (if (= (remainder z 3) 0)
+        (iter (/ z 3) (+ n 1))
+        n))
+  (iter z 0))
+
+(define test (cons 3 4))
+(car test)
+(cdr test)
