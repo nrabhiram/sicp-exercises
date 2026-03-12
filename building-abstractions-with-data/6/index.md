@@ -1,6 +1,6 @@
 ---
-slug: exercise-2-5
-name: Exercise 2.5
+slug: exercise-2-6
+name: Exercise 2.6
 date: 26-03-09 13:59
 ---
 
