@@ -17,8 +17,8 @@ You can write the `reverse` procedure using either a recursive or iterative appr
 
 In the recursive approach, 
 
-- we `append` the reversed sublist to a list containing only the first element
-- the terminating case is when we come across a `nil`, which signals that we have gone `cdr`'d our way through the entire list
+- we `append` a list containing only the first element to the reversed sublist
+- the terminating case is when we come across a `nil`, which signals that we have `cdr`'d our way through the entire list
 
 ```racket
 (reverse (list 1 4 9 16 25))
