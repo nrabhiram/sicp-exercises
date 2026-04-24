@@ -1,0 +1,3 @@
+#lang sicp
+
+(car ''abracadabra)
