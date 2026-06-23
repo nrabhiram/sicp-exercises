@@ -1,7 +1,7 @@
 ---
 slug: exercise-2-77
 name: Exercise 2.77
-date: 27-05-31 14:10
+date: 31-05-26 14:10
 ---
 
 Louis Reasoner tries to evaluate the expression `(magnitude z)` where `z` is the object shown in Figure 2.24. To his surprise, instead of the answer 5 he gets an error message from `apply-generic`, saying there is no method for the operation `magnitude` on the types `(complex)`. He shows this interaction to Alyssa P. Hacker, who says “The problem is that the complex-number selectors were never defined for `complex` numbers, just for `polar` and `rectangular` numbers. All you have to do to make this work is add the following to the complex package:”

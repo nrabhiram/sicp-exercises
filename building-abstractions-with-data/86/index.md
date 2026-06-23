@@ -1,7 +1,7 @@
 ---
 slug: exercise-2-86
 name: Exercise 2.86
-date: 27-06-11 21:05
+date: 11-06-26 21:05
 ---
 
 Suppose we want to handle complex numbers whose real parts, imaginary parts, magnitudes, and angles can be either ordinary numbers, rational numbers, or other numbers we might wish to add to the system. Describe and implement the changes to the system needed to accommodate this. You will have to define operations such as `sine` and `cosine` that are generic over ordinary numbers and rational numbers.

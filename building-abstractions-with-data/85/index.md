@@ -1,7 +1,7 @@
 ---
 slug: exercise-2-85
 name: Exercise 2.85
-date: 27-06-08 11:52
+date: 08-06-26 11:52
 ---
 
 This section mentioned a method for “simplifying” a data object by lowering it in the tower of types as far as possible. Design a procedure `drop` that accomplishes this for the tower described in [Exercise 2.83](/exercise-2-83). The key is to decide, in some general way, whether an object can be lowered. For example, the complex number 1.5 + 0*i*
