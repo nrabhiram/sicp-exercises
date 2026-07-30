@@ -1,0 +1,42 @@
+#lang sicp
+
+(define (make-account balance password)
+  (define (deposit amount)
+    (set! balance (+ balance amount))
+    balance)
+  (define (withdraw amount)
+    (if (>= balance amount)
+        (begin (set! balance (- balance amount))
+               balance)
+        "Insufficient funds"))
+  (define (add-joint-pwd second-password)
+    (lambda (p m)
+      (if (eq? p second-password)
+          (dispatch password m)
+          signal-wrong-password)))
+  (define (signal-wrong-password amount) "Incorrect password")
+  (define (dispatch p m)
+    (if (eq? p password)
+        (cond ((eq? m 'deposit) deposit)
+              ((eq? m 'withdraw) withdraw)
+              ((eq? m 'add-joint-pwd) add-joint-pwd)
+              (else (error "Unknown request: MAKE-ACCOUNT" m)))
+        signal-wrong-password))
+  dispatch)
+(define (make-joint acc p sp)
+  ((acc p 'add-joint-pwd) sp))
+
+(define peter-acc (make-account 100 'open-sesame))
+(define paul-acc
+  (make-joint peter-acc 'open-sesame 'rosebud))
+(define mary-acc
+  (make-joint peter-acc 'open-sesame 'little-lamb))
+(define john-acc
+  (make-joint paul-acc 'rosebud 'doe))
+
+((paul-acc 'rosebud 'withdraw) 40)
+((peter-acc 'open-sesame 'deposit) 50)
+((paul-acc 'open-sesame 'withdraw) 70)
+((peter-acc 'rosebud 'withdraw) 20)
+((mary-acc 'little-lamb 'withdraw) 30)
+((john-acc 'doe 'deposit) 20)
