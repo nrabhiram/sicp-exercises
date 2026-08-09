@@ -1,7 +1,7 @@
 ---
 slug: exercise-3-9
 name: Exercise 3.9
-date: 04-08-26 02:23
+date: 04-08-26 15:22
 ---
 
 In Section 1.2.1 we used the substitution model to analyze two procedures for computing factorials, a recursive version
@@ -29,12 +29,12 @@ Show the environment structures created by evaluating `(factorial 6)` using each
 
 ## Solution
 
-The environment model of evaluation:
+This is how the environment model of evaluation works:
 
 - Each environment consists of a sequence of frames.
 - Each frame is a table of bindings, i.e. variables and their corresponding values.
 - When a procedure definition is evaluated, the result yields a procedure object, i.e. a pair of values. The first value has information about the procedure, i.e. the formal parameters and the code of the procedure's body. The second value is a pointer to the enclosing environment, i.e. the place where the procedure definition was evaluated.
-- When a combination is evaluated, each sub-expression is evaluated. Then, the value of the operator sub-expression is applied to the values of the operand sub-expressions. Unlike the substitution model, variables are resolved by looking them up in the current environment.
+- When a combination is evaluated, each sub-expression is evaluated. Then, the value of the operator sub-expression is applied to the values of the operand sub-expressions. Unlike the substitution model, values are resolved by looking them up in the current environment.
 - The operator sub-expression evaluates to the procedure object.
 - When the procedure object is applied to the operands, a new environment is created, along with a corresponding frame. Within this frame, we bind the formal parameters to the argument values, i.e. operands.
 - Then, we evaluate the body of the procedure.
