@@ -1,0 +1,40 @@
+#lang sicp
+
+(define (count-pairs x)
+  (if (not (pair? x))
+      0
+      (+ (count-pairs (car x))
+         (count-pairs (cdr x))
+         1)))
+(define (last-pair x)
+  (if (null? (cdr x))
+      x
+      (last-pair (cdr x))))
+(define (make-cycle x)
+  (set-cdr! (last-pair x) x)
+  x)
+(define (count-and-display-pairs x)
+  (let ((res (count-pairs x)))
+    (display "Structure: ")
+    (newline)
+    (display x)
+    (newline)
+    (display "No. of pairs: ")
+    (display res)
+    (newline)))
+
+(count-and-display-pairs (list 'a 'b 'c))
+(count-and-display-pairs
+ ((lambda (x)
+    (set-car! x (last-pair x))
+    x)
+  (list 'a 'b 'c)))
+(count-and-display-pairs
+ ((lambda (x)
+     (let ((lp (last-pair x))
+           (2p (cdr x)))
+       (set-car! 2p lp)
+       (set-car! x 2p))
+       x)
+  (list 'a 'b 'c)))
+; (count-and-display-pairs (make-cycle (list 'a 'b 'c)))
