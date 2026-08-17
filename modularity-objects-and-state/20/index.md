@@ -18,6 +18,8 @@ using the procedural implementation of pairs given above. (Compare [Exercise 3.1
 
 ## Solution
 
+![Environment model evaluation diagram](./eval.png)
+
 A couple of caveats:
 
 - The procedure objects for `set-y!` weren't drawn for the sake of brevity
