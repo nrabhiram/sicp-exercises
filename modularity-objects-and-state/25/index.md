@@ -26,7 +26,7 @@ Depending on circumstances, `insert!` could generate either an iterative or recu
 
 | Procedure | Situation                              | Steps    | Space  |
 | --------- | -------------------------------------- | -------- | ------ |
-| `lookup`  | general case | *Θ(k×n)*                | *Θ(1)*   |        |
+| `lookup`  | general case                           | *Θ(k×n)* | *Θ(1)* |
 | `insert!` | full key path already exists           | *Θ(k×n)* | *Θ(1)* |
 | `insert!` | new chain of subtables must be created | *Θ(k×n)* | *Θ(k)* |
 
