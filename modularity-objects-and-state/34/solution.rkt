@@ -63,7 +63,8 @@
   (define (me request)
     (error "Unknown request: CONSTANT" request))
   (connect connector me)
-  (set-value! connector value me))
+  (set-value! connector value me)
+  me)
 
 (define (probe name connector)
   (define (print-probe value)
