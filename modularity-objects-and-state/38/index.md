@@ -44,4 +44,4 @@ So, some of the other possible values are: 110, 80, 90, 55, 60, and 30.
 
 Here's a timing diagram for the first ordering listed if interleaving is allowed; it depicts the scenario for when all the accesses give the same value and Mary's `set!` is processed last.
 
-[Timing diagram for when all the accesses give the same value and Mary's set! is processed last](./timing-diagram.png)
+![Timing diagram for when all the accesses give the same value and Mary's set! is processed last](./timing-diagram.png)
